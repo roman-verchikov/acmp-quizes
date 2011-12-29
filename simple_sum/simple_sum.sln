@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "simple_sum", "simple_sum\simple_sum.vcproj", "{CABC4050-55E3-4D01-AA03-07898ED97CA4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "unusual_square", "unusual_square\unusual_square.vcproj", "{5DDD5BDC-7F25-4BB6-AAB9-FE55674DEE0E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CABC4050-55E3-4D01-AA03-07898ED97CA4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CABC4050-55E3-4D01-AA03-07898ED97CA4}.Debug|Win32.Build.0 = Debug|Win32
+		{CABC4050-55E3-4D01-AA03-07898ED97CA4}.Release|Win32.ActiveCfg = Release|Win32
+		{CABC4050-55E3-4D01-AA03-07898ED97CA4}.Release|Win32.Build.0 = Release|Win32
+		{5DDD5BDC-7F25-4BB6-AAB9-FE55674DEE0E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5DDD5BDC-7F25-4BB6-AAB9-FE55674DEE0E}.Debug|Win32.Build.0 = Debug|Win32
+		{5DDD5BDC-7F25-4BB6-AAB9-FE55674DEE0E}.Release|Win32.ActiveCfg = Release|Win32
+		{5DDD5BDC-7F25-4BB6-AAB9-FE55674DEE0E}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

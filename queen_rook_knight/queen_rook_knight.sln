@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "queen_rook_knight", "queen_rook_knight\queen_rook_knight.vcproj", "{4403C980-23FC-43DE-B533-6B62F042D791}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4403C980-23FC-43DE-B533-6B62F042D791}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4403C980-23FC-43DE-B533-6B62F042D791}.Debug|Win32.Build.0 = Debug|Win32
+		{4403C980-23FC-43DE-B533-6B62F042D791}.Release|Win32.ActiveCfg = Release|Win32
+		{4403C980-23FC-43DE-B533-6B62F042D791}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
