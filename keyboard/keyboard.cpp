@@ -16,8 +16,52 @@
 // буквы, с учетом замкнутости клавиатуры.
 
 #include <iostream>
+#include <fstream>
+#include <algorithm>
+#include <string>
+#include <utility>
+
+
+#define RUN_TESTS
+
+
+using namespace std;
+
+char next_char_on_keyboard(char given_char) 
+{
+	string keyboard("qwertyuiopasdfghjklzxcvbnm");
+	size_t char_pos = keyboard.find(given_char);
+
+	return keyboard[ (char_pos+1) % keyboard.length()];
+}
+
+void tests()
+{
+	pair<char, char> test_data[] = {
+		pair<char, char>('q', 'w'),
+		pair<char, char>('l', 'z'),
+		pair<char, char>('m', 'q'),
+		pair<char, char>('p', 'a')
+	};
+
+	for (auto& test : test_data) {
+		char out = next_char_on_keyboard(test.first);
+
+		cout << ((out == test.second) ? "SUCCEEDED" : "FAILED") << endl;
+	}
+}
 
 int main()
 {
+#ifdef RUN_TESTS
+	tests();	
+#else
+	ifstream in('INPUT.TXT');
+	in >> in_char;
+
+	ofstream out('OUTPUT.TXT');
+	out << next_char_on_keyboard(in_char);
+#endif
+
 	return 0;
 }
