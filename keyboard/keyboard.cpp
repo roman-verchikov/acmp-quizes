@@ -21,9 +21,7 @@
 #include <string>
 #include <utility>
 
-
-#define RUN_TESTS
-
+// #define RUN_TESTS
 
 using namespace std;
 
@@ -56,10 +54,12 @@ int main()
 #ifdef RUN_TESTS
 	tests();	
 #else
-	ifstream in('INPUT.TXT');
+	char in_char;
+
+	ifstream in("INPUT.TXT");
 	in >> in_char;
 
-	ofstream out('OUTPUT.TXT');
+	ofstream out("OUTPUT.TXT");
 	out << next_char_on_keyboard(in_char);
 #endif
 
