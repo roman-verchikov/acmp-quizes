@@ -44,10 +44,18 @@ int evaluate_equation(const string &equation)
 				result = op2 + y - 2*'0';
 			} else if (op2 == 'x') {
 				result = op1 - y;
+			} else if (y == 'x') {
+				result = op1 - op2;
 			}
 			break;
 		case OP_PLUS:
-			result = (y - ((op1 == 'x') ? op2 : op1));
+			if (op1 == 'x') {
+				result = y - op2;
+			} else if (op2 == 'x') {
+				result = y - op1;
+			} else if (y == 'x') {
+				result = op1 + op2 - 2*'0';
+			}
 			break;
 	}
 
@@ -60,15 +68,25 @@ void tests()
 		pair<string, int>("x+5=7", 2),
 		pair<string, int>("9-x=1", 8),
 		pair<string, int>("x-3=2", 5),
-		pair<string, int>("x-0=2", 2),
+		pair<string, int>("0+x=3", 3),
+		pair<string, int>("3-x=3", 0),
+		pair<string, int>("0+3=x", 3),
+		pair<string, int>("3-2=x", 1),
 		pair<string, int>("3+x=6", 3)
 	};
+	bool all_succeeded = true;
 
 	for (const auto& test : tests) {
 		int out = evaluate_equation(test.first);
 
-		cout << test.first << ": " << ((out == test.second) ? "PASS" : "FAIL") << " ";
-		cout << test.second << " : " << out << endl;
+		if (out != test.second) {
+			cout << test.first << "FAILED; got " << out << ", expected " << test.second << endl;
+			all_succeeded = false;
+		}
+	}
+
+	if (all_succeeded) {
+		cout << "All succeeded" << endl;
 	}
 }
 
