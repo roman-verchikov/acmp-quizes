@@ -23,11 +23,21 @@
 
 using namespace std;
 
+int evaluate_equation(const string &equation)
+{
+	int result = 0;
+
+	return result;
+}
+
 int main()
 {
 	ifstream in("INPUT.TXT");
-	string s;
-	getline(in, s);
+	string equation;
+	getline(in, equation);
+
+	ofstream out("OUTPUT.TXT")
+	out << evaluate_equation(equation);
 
 	return 0;
 }
